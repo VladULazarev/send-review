@@ -1,0 +1,196 @@
+/*
+CONTENTS
+
+1. Main elements
+2. Form css
+3. Buttons
+4. Reviews
+
+/*  ------------------------------------------------------ 1. Main elements */
+
+:root {
+
+  /* Basic colors*/
+  --main-text-color: #172b4d;
+  --header-color: #172b4d;
+  --purple-text: #9c27b0;
+  --box-shadow: 0 0 10px 1px rgb(0 0 0 / 7%);
+  --hover-box-shadow:  0 0 10px 1px rgb(76 175 80 / 20%);
+  --gray-placeholder: #607d8b;
+}
+html, body {
+  font-family: system-ui, -apple-system, Rubik, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: var(--main-text-color);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  touch-action: pan-y;
+  background: #fff;
+}
+/**
+ * Firefox specific rule
+ */
+@-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+  }
+}
+h6, h5, h4, h3, h2, h1 {
+  font-family: system-ui, -apple-system, Nunito Sans, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: var(--header-color);
+  font-weight: 400;
+}
+h5 {
+  margin-bottom: .2rem;
+  transition: all 300ms;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: .5rem;
+}
+.container {
+    margin-top: 3rem;
+}
+.content {
+  visibility: visible;
+  margin-top: 10rem;
+  opacity: 0;
+}
+.fl { /* first-letter*/
+  font-weight: 500;
+  color: var(--purple-text);
+  padding-right: .03rem;
+}
+h5::first-letter {
+  font-weight: 500;
+  color: var(--purple-text);
+  padding-right: .03rem;
+}
+
+/* ------------------------------------------------------------ 2. Form css */
+.form-row {
+  flex-wrap: wrap;
+}
+.form-group {
+  position: relative;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-control {
+  color: #1f4872;
+  border: none;
+  padding: .5rem .7rem;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 70%);
+}
+.form-control:hover {
+  box-shadow: 0 0 5px 0 rgb(0 150 136 / 50%);
+  cursor: pointer;
+}
+.form-control:focus {
+  box-shadow: 0 0 5px 0 rgb(0 150 136 / 50%);
+  color: #607d8b;
+}
+.form-control::placeholder {
+  color: var(--gray-placeholder);
+  font-weight: 300;
+}
+label {
+  margin-bottom: .5rem;
+}
+.form-errors {
+  margin-top: 1.5rem;
+}
+.name-empty,
+.review-empty,
+.many-reviews,
+.wrong,
+.name-too-long,
+.review-too-long
+{
+  display:none;
+  font-size: .8rem;
+  padding: .2rem .5rem;
+  color: #78358a;
+  font-weight: 500;
+}
+
+/* ------------------------------------------------------------ 3. Buttons  */
+.btn-default {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: .4rem;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+}
+.btn-review {
+  background: #009688;
+  width: 100%;
+  transition: all 300ms;
+}
+.btn-review:hover {
+  background: #00796b;
+}
+
+/* ------------------------------------------------------------- 4. Reviews */
+#reviews {
+  margin-top: 2.6rem;
+  padding: 0 1rem;
+}
+.review-cart {
+  border: none;
+  padding: .8rem 1rem .6rem;
+  margin-bottom: 2rem;
+  border-radius: 7px;
+  box-shadow: var(--box-shadow);
+  background: #fff;
+  transition: all 300ms;
+}
+.review-cart:hover {
+  box-shadow: var(--hover-box-shadow);
+}
+.review-author {
+  display: inline-block;
+  margin-bottom: .3rem;
+  font-size: .9rem;
+  font-weight: 500;
+  color: #607d8b;
+}
+.review-author-date {
+  display: inline-block;
+  margin-bottom: .3rem;
+  font-size: .7rem;
+  font-weight: 500;
+  color: #607d8b;
+}
+.no-reviews {
+  border: none;
+  padding: .5rem 1rem .6rem;
+  margin-bottom: 2rem;
+  border-radius: 7px;
+  box-shadow: var(--box-shadow);
+  background: #fff;
+  transition: all 300ms;
+}
+.btn-delete-review {
+  display: none;
+  background: var(--purple-text);
+}
+]
+@media (max-width: 992px) {
+  .container {
+      margin-top: 1rem;
+  }
+  .content {
+      margin-top: 5rem;
+  }
+  .form-errors {
+    margin-top: 5rem;
+  }
+}
