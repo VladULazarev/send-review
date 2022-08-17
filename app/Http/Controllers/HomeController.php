@@ -96,7 +96,7 @@ if (isset($_POST['review'])) {
     else {
         HomeController::store($name, $review);
     }
-    
+
 // If button 'btn-delete-review' was clicked
 } elseif (isset($_POST['deleteReview'])) {
 

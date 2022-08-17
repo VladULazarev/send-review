@@ -182,7 +182,6 @@ label {
   display: none;
   background: var(--purple-text);
 }
-]
 @media (max-width: 992px) {
   .container {
       margin-top: 1rem;
